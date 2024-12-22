@@ -1,0 +1,28 @@
+.header-user {
+  display: flex;
+  align-items: center;
+  background-color: #c9c9c9;
+  margin: -15px;
+  padding: 10px;
+  margin-bottom: 15px;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.header-user > h3 {
+  margin: auto;
+}
+
+section.user {
+  display: flex;
+  justify-content: space-between;
+  background-color: #e1e1e1;
+  margin: -15px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+section.user > div:nth-child(even) > h4 {
+  text-align: center;
+}
