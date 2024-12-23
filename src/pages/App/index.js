@@ -28,8 +28,8 @@ function NavBar() {
         <span className="material-symbols-outlined">select_check_box</span>
       </NavLink>
       
-      <NavLink to="/notificacoes">
-        <span className="material-symbols-outlined">notifications</span>
+      <NavLink to="/publicar">
+        <span className="material-symbols-outlined">add_box</span>
       </NavLink>
     </nav>
   )

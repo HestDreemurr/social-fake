@@ -3,7 +3,7 @@ import Home from "./Home"
 import Users from "./Users"
 import User from "./User"
 import Tasks from "./Tasks"
-import Notifications from "./Notifications"
+import Publish from "./Publish"
 
 export const Pages = {
   App,
@@ -11,5 +11,5 @@ export const Pages = {
   Users,
   User,
   Tasks,
-  Notifications
+  Publish
 }

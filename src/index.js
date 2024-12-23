@@ -12,7 +12,7 @@ root.render(
         <Route index element={<Pages.Home />} />
         <Route path="usuarios" element={<Pages.Users />} />
         <Route path="tarefas" element={<Pages.Tasks />} />
-        <Route path="notificacoes" element={<Pages.Notifications />} />
+        <Route path="publicar" element={<Pages.Publish />} />
       </Route>
       
       <Route path="usuario/:id" element={<Pages.User />} />

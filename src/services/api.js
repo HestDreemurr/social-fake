@@ -17,6 +17,17 @@ async function findPosts(userId) {
   return posts
 }
 
+async function addPost(post) {
+  let res = await fetch(`${url}/posts`, {
+    method: "POST",
+    body: JSON.stringify(post),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    }
+  })
+  return res
+}
+
 async function getUsers() {
   let res = await fetch(`${url}/users`)
   let users = await res.json()
@@ -39,10 +50,28 @@ async function findComments(postId) {
   return comentarios
 }
 
+async function addComment(comment) {
+  let res = await fetch(`${url}/comments`, {
+    method: "POST",
+    body: JSON.stringify(comment),
+    headers: { 'Content-type': 'application/json; charset=UTF-8' }
+  })
+  return res
+}
+
 async function getTasks() {
   let res = await fetch(`${url}/todos`)
   let tasks = await res.json()
   return tasks
+}
+
+async function addTask(task) {
+  let res = await fetch(`${url}/todos`, {
+    method: "POST",
+    body: JSON.stringify(task),
+    headers: { 'Content-type': 'application/json; charset=UTF-8' }
+  })
+  return res
 }
 
 function getLikes() {
@@ -50,4 +79,4 @@ function getLikes() {
   return likes
 }
 
-export { getPosts, getUsers, findUser, findComments, getLikes, findPosts, getTasks } 
+export { getPosts, getUsers, findUser, findComments, getLikes, findPosts, getTasks, addPost, addTask, addComment }

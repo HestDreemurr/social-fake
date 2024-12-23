@@ -10,9 +10,9 @@ export default function Task({ task }) {
   }, [task])
   
   return (
-    <li className="task">
+    <>
       {user && (
-        <>
+        <li className="task">
           <img src={ user.avatar } alt={ user.name } />
           <div>
             <h5>
@@ -26,8 +26,8 @@ export default function Task({ task }) {
           >
             { task.completed ? "check" : "close" }
           </span>
-        </>
+        </li>
       )}
-    </li>
+    </>
   )
 }
