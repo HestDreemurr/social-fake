@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import { Link } from "react-router"
 import Like from "./Like"
 import Comments from "./Comments"
@@ -11,6 +11,7 @@ export default function Post({ post }) {
   let [showComments, setShowComments] = useState(false)
   let [likes, setLikes] = useState(getLikes())
   let [isLiked, setIsLiked] = useState(false)
+  let inputRef = useRef(null)
   
   useEffect(() => {
     findUser(post.userId).then(user => setUser(user))
@@ -32,6 +33,11 @@ export default function Post({ post }) {
   
   function handleComment() {
     setShowComments(!showComments)
+    if (!showComments) {
+      setTimeout(() => {
+        inputRef.current.focus()
+      }, 100)
+    }
   }
   
   return (
@@ -62,7 +68,7 @@ export default function Post({ post }) {
         
       </div>
       
-      <Comments comments={comments} showComments={showComments} />
+      <Comments comments={comments} setComments={setComments} showComments={showComments} inputRef={inputRef} />
     </article>
   )
 }

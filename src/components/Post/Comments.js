@@ -1,6 +1,9 @@
-import React from "react"
+import React, { useState } from "react"
+import { addComment } from "../../services/api"
 
-export default function Comments({ comments, showComments }) {
+export default function Comments({ comments, setComments, showComments, inputRef }) {
+  let [commentInput, setCommentInput] = useState("")
+  let showSend = commentInput ? true : false
   
   let commentsList = comments.map(comment => {
     return (
@@ -10,12 +13,46 @@ export default function Comments({ comments, showComments }) {
     )
   })
   
+  function handleComment() {
+    addComment({ body: commentInput })
+      .then(res => {
+        if (res.status !== 201) {
+          alert("Erro ao Enviar comentario")
+          return
+        }
+        setComments([
+          ...comments,
+          {
+            body: commentInput,
+            id: res.id
+          }
+        ])
+        setCommentInput("")
+      })
+  }
+  
   return (
     <>
       {showComments && (
-        <ul className="comments">
-          { commentsList }
-        </ul>
+        <div className="comments">
+          <ul>
+            { commentsList }
+          </ul>
+          
+          <div className="comment-input">
+            <input
+            ref={inputRef}
+            value={commentInput}
+            onChange={(e) => setCommentInput(e.target.value)}
+            placeholder="Comentar..."
+            />
+            {showSend && (
+              <button onClick={handleComment}>
+                <span className="material-symbols-outlined">send</span>
+              </button>
+            )}
+          </div>
+        </div>
       )}
     </>
   )

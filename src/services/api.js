@@ -56,7 +56,9 @@ async function addComment(comment) {
     body: JSON.stringify(comment),
     headers: { 'Content-type': 'application/json; charset=UTF-8' }
   })
-  return res
+  let commentRes = await res.json()
+  commentRes.status = res.status
+  return commentRes
 }
 
 async function getTasks() {

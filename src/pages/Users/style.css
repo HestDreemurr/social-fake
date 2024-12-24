@@ -21,14 +21,12 @@
 }
 
 .search {
-  display: flex;
-  align-items: center;
-  gap: 5px;
+  position: relative;
 }
 
 .search > input {
   width: 100%;
-  padding: 8px;
+  padding: 10px 50px;
   border: none;
   border-radius: 5px;
   background-color: #8080806b;
@@ -46,8 +44,9 @@
 }
 
 .search > span {
+  position: absolute;
   background-color: gray;
-  padding: 5px;
+  padding: 7px;
   border-radius: 5px;
   color: white;
 }
