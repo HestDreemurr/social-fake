@@ -1,0 +1,36 @@
+section.publish {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px #00000072;
+}
+
+section.publish h1 {
+  text-align: center;
+}
+
+section.publish .input-field {
+  margin: 8px 0px;
+  width: 100%;
+}
+
+section.publish input, textarea {
+  padding: 8px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid black;
+}
+
+section.publish button {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: var(--purple);
+  color: white;
+  border: none;
+}
+
+section.publish button.posting {
+  background-color: var(--light-purple);
+}
+

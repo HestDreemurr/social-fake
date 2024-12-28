@@ -1,0 +1,52 @@
+.users {
+  list-style: none;
+}
+
+.user > a {
+  display: flex;
+  background-color: white;
+  margin: 15px 5px;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.user img {
+  width: 70px;
+  border-radius: 50%;
+}
+
+.user div {
+  margin: 8px 0px 0px 8px;
+}
+
+.search {
+  position: relative;
+}
+
+.search > input {
+  width: 100%;
+  padding: 10px 50px;
+  border: none;
+  border-radius: 5px;
+  background-color: #8080806b;
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+}
+
+.search > input:focus {
+  outline: none;
+}
+
+.search > input::placeholder {
+  color: #ffffffd2;
+}
+
+.search > span {
+  position: absolute;
+  background-color: gray;
+  padding: 7px;
+  border-radius: 5px;
+  color: white;
+}

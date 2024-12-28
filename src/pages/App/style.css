@@ -1,0 +1,53 @@
+a {
+  color: black;
+  padding: 5px;
+}
+
+span.material-symbols-outlined {
+  font-size: 1.7em;
+}
+
+.header-app {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.header-app img {
+  display: block;
+  width: 150px;
+}
+
+.header-app a {
+  box-shadow: 1px 1px 5px #00000083;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.header-app > .user-account > img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+nav {
+  padding: 10px 0px;
+  box-shadow: 2px 0px 3px #0000006e;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+nav a {
+  margin-left: 10px;
+}
+
+nav a.active {
+  color: var(--blue);
+  border-bottom: 2px solid var(--blue);
+  font-variation-settings: 
+  "FILL" 1;
+}
+

@@ -1,0 +1,115 @@
+article.post {
+  background-color: white;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+article.post > .user, .loading-user {
+  display: flex;
+}
+
+.loading-user > .image {
+  width: 50px;
+  height: 50px;
+  background-color: lightgray;
+  border-radius: 50%;
+}
+
+.loading-user > .username {
+  width: 100px;
+  height: 20px;
+  background-color: lightgray;
+  border-radius: 5px;
+  margin: 5px 0px 0px 5px;
+}
+
+article.post > .user > img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+article.post > .user > p {
+  align-self: flex-start;
+  margin: 5px 0px 0px 5px;
+  font-weight: bold;
+}
+
+article.post > .content {
+  margin: 10px 0px;
+}
+
+article.post > .interactions {
+  display: flex;
+  gap: 15px;
+  padding-top: 5px;
+}
+
+article.post > .interactions button {
+  background-color: white;
+  border: none;
+  margin-right: 5px;
+}
+
+article.post > .interactions > div {
+  display: flex;
+  align-items: center;
+}
+
+.like.liked > button > span {
+  color: var(--blue);
+  font-variation-settings: 
+  "FILL" 1;
+}
+
+.comments > ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+li.comment {
+  background-color: #dddddd;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.comment-input {
+  padding: 10px;
+  width: 100%;
+  position: relative;
+}
+
+.comment-input > input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding-right: 50px;
+}
+
+.comment-input > button {
+  position: absolute;
+  right: 3%;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: black;
+  color: white;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.save {
+  margin-left: auto;
+}
+
+.save span {
+  font-size: 2em;
+}
+
+.saved > button > span {
+  color: var(--blue);
+  font-variation-settings: 
+  "FILL" 1;
+}

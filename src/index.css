@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap");
+
+:root {
+  --blue: #3A0CF7;
+  --purple: #870CF7;
+  --dark-purple: #6a09c2;
+  --light-purple: #870cf786;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Parkinsans";
+}
+
+main {
+  padding: 15px;
+  background-color: #f2f2f2;
+}
