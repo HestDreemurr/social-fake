@@ -1,4 +1,4 @@
-import ReactDOM from 'react-dom/client'
+import ReactDOM from "react-dom/client"
 import { BrowserRouter, Routes, Route } from "react-router"
 import { Pages } from "./pages/pages"
 import { UserProvider } from "./context/UserContext"
