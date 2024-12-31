@@ -1,0 +1,65 @@
+.header-account {
+  display: flex;
+  align-items: center;
+  background-color: #c9c9c9;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.header-account > h3 {
+  margin: auto;
+}
+
+.account, .edit-form {
+  background-color: var(--gray);
+}
+
+.account {
+  padding: 15px;
+}
+
+.account img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.account > .bio {
+  margin: 5px;
+}
+
+.actions {
+  padding-top: 5px;
+  display: flex;
+  gap: 5px;
+}
+
+.actions > button {
+  padding: 8px;
+  flex-basis: 50%;
+}
+
+.edit-button, .exit-button {
+  border: none;
+  color: white;
+}
+
+.edit-button {
+  background-color: var(--blue);
+}
+
+.exit-button {
+  background-color: red;
+}
+
+.edit-form {
+  padding: 15px;
+}
+
+.edit-form > form {
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+}

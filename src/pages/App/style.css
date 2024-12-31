@@ -19,17 +19,22 @@ span.material-symbols-outlined {
   width: 150px;
 }
 
-.header-app a {
+.header-app .cadastro-link {
   box-shadow: 1px 1px 5px #00000083;
   padding: 10px;
   border-radius: 10px;
   text-decoration: none;
 }
 
+.header-app > .user-account {
+  padding: 0;
+}
+
 .header-app > .user-account > img {
   width: 60px;
   height: 60px;
   border-radius: 50%;
+  order: 1;
 }
 
 nav {

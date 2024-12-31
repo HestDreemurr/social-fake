@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Link, useNavigate } from "react-router"
+import "./style.css"
 
 export default function Register() {
   let navigate = useNavigate()
@@ -11,8 +12,12 @@ export default function Register() {
   
   function handleSubmit(e) {
     e.preventDefault()
-    localStorage.setItem("user", JSON.stringify(user))
-    navigate("/")
+    localStorage.setItem("user", JSON.stringify({
+      ...user,
+      bio: "Essa é a Biografia!",
+      photo: user.photo ? user.photo : "/src/assets/user-default-avatar.jpeg"
+    }))
+    navigate("/conta")
     window.location.reload()
   }
   
@@ -54,6 +59,7 @@ export default function Register() {
               ...user,
               name: e.target.value
             })}
+            required
             />
           </div>
           
@@ -68,17 +74,24 @@ export default function Register() {
               ...user,
               username: e.target.value
             })}
+            required
             />
           </div>
           
           <div>
-            <label for="photo">Foto de Perfil</label>
+            <label for="photo">
+              Foto de perfil
+              <small>(Opcional)</small>
+            </label>
             <input 
             type="file" 
             id="photo" 
             accept="image/*"
             onChange={handleChangeImage}
             />
+            {user.photo && (
+              <img src={ user.photo } alt="Sua foto de perfil" />
+            )}
           </div>
           
           <button type="submit">Cadastrar</button>

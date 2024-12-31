@@ -1,8 +1,11 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
 import { addComment } from "../../services/api"
+import { UserContext } from "../../context/UserContext"
+import profile from "../../assets/user-default-avatar.jpeg"
 
 export default function Comments({ comments, setComments, showComments, inputRef }) {
   let [commentInput, setCommentInput] = useState("")
+  let user = useContext(UserContext).user
   let showSend = commentInput ? true : false
   
   let commentsList = comments.map(comment => {
@@ -14,6 +17,11 @@ export default function Comments({ comments, setComments, showComments, inputRef
   })
   
   function handleComment() {
+    if (!user) {
+      alert("Cadastre-se para comentar")
+      return
+    }
+    
     addComment({ body: commentInput })
       .then(res => {
         if (res.status !== 201) {
@@ -40,6 +48,7 @@ export default function Comments({ comments, setComments, showComments, inputRef
           </ul>
           
           <div className="comment-input">
+            <img src={ user ? user.photo : profile } alt="Sua foto de peril" />
             <input
             ref={inputRef}
             value={commentInput}

@@ -19,6 +19,7 @@ root.render(
         
         <Route path="usuario/:id" element={<Pages.User />} />
         <Route path="cadastro" element={<Pages.Register />} />
+        <Route path="conta" element={<Pages.Account />} />
       </Routes>
     </BrowserRouter>
   </UserProvider>

@@ -1,7 +1,8 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useContext } from "react"
 import { useParams, Link } from "react-router"
 import Posts from "../../components/Posts"
 import { findUser, findPosts } from "../../services/api"
+import { UserContext } from "../../context/UserContext"
 import "./style.css"
 
 export default function User() {
@@ -33,6 +34,10 @@ export default function User() {
               <img src={ user.avatar }  alt={ user.name } />
               <h4>{ user.name }</h4>
               <p>{ user.username }</p>
+              <p className="bio">
+                Olá! Meu nome é { user.name }. <br />
+                Eu moro em { user.address.city }, na rua { user.address.street }.
+              </p>
             </div>
             
             <div>

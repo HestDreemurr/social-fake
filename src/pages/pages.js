@@ -6,6 +6,7 @@ import Tasks from "./Tasks"
 import Publish from "./Publish"
 import Saved from "./Saved"
 import Register from "./Register"
+import Account from "./Account"
 
 export const Pages = {
   App,
@@ -15,5 +16,6 @@ export const Pages = {
   Tasks,
   Publish,
   Saved,
-  Register
+  Register,
+  Account
 }

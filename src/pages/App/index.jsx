@@ -5,7 +5,7 @@ import logo from "../../assets/logotext.png"
 import "./style.css"
 
 function Header() {
-  let user = useContext(UserContext)
+  let user = useContext(UserContext).user
   
   return (
     <header className="header-app">
@@ -13,12 +13,11 @@ function Header() {
         <img alt="Social Fake Logo" src={logo} />
       </div>
       {user ? (
-        <div class="user-account">
+        <Link to="/conta" className="user-account">
           <img src={user.photo} alt={user.name} />
-          <p>{ user.name }</p>
-        </div>
+        </Link>
       ) : (
-        <Link to="/cadastro">
+        <Link to="/cadastro" className="cadastro-link">
           Cadastro
         </Link>
       )}

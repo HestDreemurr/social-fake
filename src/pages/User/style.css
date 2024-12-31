@@ -17,7 +17,7 @@
 section.user {
   display: flex;
   justify-content: space-between;
-  background-color: #e1e1e1;
+  background-color: var(--gray);
   margin: -15px;
   padding: 15px;
   margin-bottom: 15px;
@@ -25,4 +25,8 @@ section.user {
 
 section.user > div:nth-child(even) > h4 {
   text-align: center;
+}
+
+section.user .bio {
+  margin: 5px;
 }
