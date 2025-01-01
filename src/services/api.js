@@ -1,8 +1,10 @@
 let url = "https://jsonplaceholder.typicode.com"
 
 async function getPosts() {
+  let postsQuant = window.innerHeight >= 992 ? 9 : 3
+  
   let posts = []
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < postsQuant; i++) {
     let randomId = Math.floor(Math.random() * 100) + 1
     let res = await fetch(`${url}/posts/${randomId}`)
     let post = await res.json()

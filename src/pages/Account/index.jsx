@@ -26,7 +26,7 @@ export default function Account() {
   }
   
   return (
-    <>
+    <main>
       <header className="header-account">
         <Link to="/">
           <span className="material-symbols-outlined">home</span>
@@ -59,6 +59,6 @@ export default function Account() {
           </section>
         </>
       )}
-    </>
+    </main>
   )
 }

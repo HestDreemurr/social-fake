@@ -28,25 +28,33 @@ function Header() {
 function NavBar() {
   return (
     <nav>
-      <NavLink to="/">
-        <span className="material-symbols-outlined">home</span>
-      </NavLink>
-      
-      <NavLink to="/usuarios">
-        <span className="material-symbols-outlined">group</span>
-      </NavLink>
-      
-      <NavLink to="/tarefas">
-        <span className="material-symbols-outlined">select_check_box</span>
-      </NavLink>
-      
-      <NavLink to="/publicar">
-        <span className="material-symbols-outlined">add_box</span>
-      </NavLink>
-      
-      <NavLink to="/salvos">
-        <span className="material-symbols-outlined">bookmarks</span>
-      </NavLink>
+      <div>
+        
+        <NavLink to="/">
+          <span className="material-symbols-outlined">home</span>
+          <span className="link-name">Início</span>
+        </NavLink>
+        
+        <NavLink to="/usuarios">
+          <span className="material-symbols-outlined">group</span>
+          <span className="link-name">Usuários</span>
+        </NavLink>
+        
+        <NavLink to="/tarefas">
+          <span className="material-symbols-outlined">select_check_box</span>
+          <span className="link-name">Tarefas</span>
+        </NavLink>
+        
+        <NavLink to="/publicar">
+          <span className="material-symbols-outlined">add_box</span>
+          <span className="link-name">Publicar</span>
+        </NavLink>
+        
+        <NavLink to="/salvos">
+          <span className="material-symbols-outlined">bookmarks</span>
+          <span className="link-name">Salvos</span>
+        </NavLink>
+      </div>
     </nav>
   )
 }

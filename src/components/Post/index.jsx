@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react"
 import { Link } from "react-router"
+
 import Comments from "./Comments"
 import { findUser, getLikes, findComments } from "../../services/api"
 import "./style.css"

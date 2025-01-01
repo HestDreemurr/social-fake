@@ -31,8 +31,8 @@ export default function Posts({ posts }) {
   }
   
   return (
-    <>
+    <div className="posts">
       { postsArticle }
-    </>
+    </div>
   )
 }
